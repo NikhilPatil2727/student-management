@@ -7,9 +7,9 @@ import FinancialAnalysis from './components/Dashboard/FinancialAnalysis'
 const App = () => {
     return (
         <div>
-            {/* <Navbar/> */}
-            {/* <CurrentPlan/> */}
-            {/* <Statistics/> */}
+            <Navbar/>
+            <CurrentPlan/>
+            <Statistics/>
             <FinancialAnalysis/>
         </div>
     )

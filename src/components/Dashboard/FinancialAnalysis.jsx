@@ -1,5 +1,7 @@
 import React from 'react';
-
+import universityIcon from '../../assets/University.png';
+import Delete from '../../assets/delete-sign.png';
+import checkmark from '../../assets/checkmark.png';
 const FinancialAnalysis = () => {
   return (
     <div className="p-4">
@@ -33,7 +35,7 @@ const FinancialAnalysis = () => {
             <div className="flex items-center mt-3">
               {/* Dummy icon path – replace with your actual icon */}
               <img
-                src="/dummy/path/total_fee_icon.png"
+                src={universityIcon}
                 alt="Total Fee Icon"
                 className="w-10 h-10"
               />
@@ -55,7 +57,7 @@ const FinancialAnalysis = () => {
             {/* Bottom row: icon and amount */}
             <div className="flex items-center mt-3">
               <img
-                src="/dummy/path/collected_fee_icon.png"
+                src={Delete}
                 alt="Collected Fee Icon"
                 className="w-10 h-10"
               />
@@ -77,7 +79,7 @@ const FinancialAnalysis = () => {
             {/* Bottom row: icon and amount */}
             <div className="flex items-center mt-3">
               <img
-                src="/dummy/path/due_fee_icon.png"
+                src={checkmark}
                 alt="Due Fee Icon"
                 className="w-10 h-10"
               />
