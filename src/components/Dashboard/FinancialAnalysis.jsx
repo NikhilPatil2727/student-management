@@ -2,6 +2,7 @@ import React from 'react';
 import universityIcon from '../../assets/University.png';
 import Delete from '../../assets/delete-sign.png';
 import checkmark from '../../assets/checkmark.png';
+
 const FinancialAnalysis = () => {
   return (
     <div className="p-4">
