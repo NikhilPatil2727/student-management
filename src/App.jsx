@@ -5,6 +5,10 @@ import Statistics from './components/Dashboard/Statistics'
 import FinancialAnalysis from './components/Dashboard/FinancialAnalysis'
 import ManagementSystem from './components/Dashboard/ManagementSystem'
 import FeeByMonth from './components/Dashboard/FeeByMonth'
+import AttendanceCards from './components/Attendance/AttendanceCards'
+import FilterForm from './components/Attendance/FilterForm'
+import Table from './components/Attendance/Table'
+import ProperAttend from './components/Attendance/ProperAttend'
 
 const App = () => {
     return (
@@ -14,7 +18,11 @@ const App = () => {
             {/* <Statistics/> */}
             {/* <FinancialAnalysis/> */}
             {/* <ManagementSystem/> */}
-            <FeeByMonth/>
+            {/* <FeeByMonth/> */}
+            {/* <AttendanceCards/>
+            <FilterForm/>
+            <Table/> */}
+            <ProperAttend/>
         </div>
     )
 }

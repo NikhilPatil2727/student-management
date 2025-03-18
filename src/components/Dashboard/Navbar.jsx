@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import avtar from '../../assets/avatar.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,12 +16,12 @@ const Navbar = () => {
 
       {/* Right section: user avatar + dropdown */}
       <div className="relative">
-        <img
-          src="https://via.placeholder.com/40" 
-          alt="User Avatar"
-          className="rounded-full cursor-pointer"
-          onClick={handleAvatarClick}
-        />
+      <img
+  src={avtar}
+  alt="User Avatar"
+  className="w-10 h-10 rounded-full cursor-pointer"
+  onClick={handleAvatarClick}
+/>
         
         {/* Dropdown menu */}
         {isOpen && (
