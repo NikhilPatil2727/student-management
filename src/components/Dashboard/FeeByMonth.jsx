@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  ResponsiveContainer,
   BarChart,
   Bar,
   XAxis,
@@ -21,8 +22,9 @@ const data = [
 
 export default function FeeByMonth() {
   return (
-    <div className="bg-white rounded shadow p-4"
-         style={{ width: "730px", height: "420px" }}
+    <div
+      className="bg-white rounded shadow p-4"
+      style={{ width: "100%", maxWidth: "730px", height: "420px" }}
     >
       {/* Top section: Title and total fees */}
       <div className="flex items-center gap-2 text-gray-600 text-sm">
@@ -35,29 +37,27 @@ export default function FeeByMonth() {
         Fee by Month Wise
       </h2>
 
-      {/* Bar chart */}
-      <div className="mt-4 flex justify-center">
-        <BarChart
-          width={700}
-          height={300}
-          data={data}
-          margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="month" tick={{ fontSize: 12 }} />
-          <YAxis tick={{ fontSize: 12 }} />
-          <Tooltip
-            formatter={(value) => `₹${value.toLocaleString()}`}
-          />
-          <Bar dataKey="fee" fill="#10B981">
-            {/* Labels on top of each bar */}
-            <LabelList
-              dataKey="fee"
-              position="top"
-              formatter={(value) => `₹${value.toLocaleString()}`}
-            />
-          </Bar>
-        </BarChart>
+      {/* Responsive Bar chart */}
+      <div className="mt-4" style={{ width: "100%", height: "300px" }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={data}
+            margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <XAxis dataKey="month" tick={{ fontSize: 12 }} />
+            <YAxis tick={{ fontSize: 12 }} />
+            <Tooltip formatter={(value) => `₹${value.toLocaleString()}`} />
+            <Bar dataKey="fee" fill="#10B981">
+              {/* Labels on top of each bar */}
+              <LabelList
+                dataKey="fee"
+                position="top"
+                formatter={(value) => `₹${value.toLocaleString()}`}
+              />
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
   );

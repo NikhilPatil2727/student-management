@@ -23,6 +23,7 @@ const App = () => {
             <FilterForm/>
             <Table/> */}
             <ProperAttend/>
+            {/* <FeeByMonth/> */}
         </div>
     )
 }
