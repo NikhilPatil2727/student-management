@@ -1,49 +1,30 @@
 import React from 'react';
-import MyImage from '../../assets/man-with-laptop-light.png';
+import MyImage from '../../assets/man-with-laptop-light.png'; // Your local image path
+
 const CurrentPlan = () => {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      {/* 
-        Top Bar Section 
-        ------------------------------------------------
-        Displays the current plan on the left and 
-        expiration date on the right
-      */}
-      <div className="flex justify-between items-center bg-indigo-600 text-white rounded-md p-4">
-        <span className="font-semibold">
-          Current Plan: <span className="font-bold">Premium</span>
-        </span>
-        <span>Expire On: 03-05-2024</span>
-      </div>
-
-      {/* 
-        Main Content Section 
-        ------------------------------------------------
-        1. Welcome message
-        2. Subtext / Quote
-        3. Image (dummy link)
-      */}
-      <div className="mt-8 bg-white rounded-md shadow p-6 flex flex-col md:flex-row items-center">
-        {/* Text Content */}
-        <div className="w-full md:w-1/2 md:pr-6">
-          <h1 className="text-2xl font-bold text-gray-800">
-            Welcome, Your Institute
-          </h1>
-          <p className="mt-2 text-gray-600">
-            Morning is when I am awake and there is a dawn in me.
-          </p>
+    <div className="bg-white rounded-lg p-4">
+      <div className="flex items-center justify-between mb-4">
+        <div className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm">
+          Current Plan - Premium
         </div>
-
-        {/* Image Content */}
-        <div className="w-full md:w-1/2 mt-6 md:mt-0 flex justify-center">
-          <img
-            src={MyImage}
-            alt="Dummy" 
-            className="max-w-full h-auto"
+        <div className="text-sm text-gray-600">
+          Expires On: 03-05-2024
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row items-center gap-8">
+        <div className="flex-1">
+          <h2 className="text-xl font-semibold mb-2">👋 Welcome, Your Institute</h2>
+          <p className="text-gray-600">An early-morning walk is a blessing for the whole day.</p>
+        </div>
+        <div className="w-full md:w-auto">
+          <img 
+            src={MyImage} // Using your local image
+            alt="Welcome" 
+            className="w-[150px] h-auto md:w-[200px] rounded-lg shadow-sm"
           />
         </div>
       </div>
-
     </div>
   );
 };
